@@ -9,6 +9,7 @@
 
     <style>
         div {
+
             display: flex;
             width: 100dvw;
             align-items: center;
@@ -99,7 +100,7 @@
                         <label for="rdbEstagiario">Pago pra trabalhar</label>
                     </td>
                 </tr>
-
+                <!-- componente de checkbox -->
                 <tr>
                     <td width="15%">
                         Quais seu estilo de musicas favoritas
@@ -115,6 +116,81 @@
 
                     </td>
                 </tr>
+                <!-- componente de textarea -->
+                <tr>
+                    <td>Digite sua mensagem</td>
+                    <td><textarea name="txtMensagem" cols="60" rows="5"></textarea></td>
+                </tr>
+                <!-- componente select como dropbox -->
+                <tr>
+                    <td>Voce gosta quando de meninas?</td>
+                    <td>
+                        <select name="slcMeninas" size="1">
+                            <option value="1" selected="true">Pouco</option>
+                            <option value="2">Maromeno</option>
+                            <option value="3">Muito</option>
+                            <option value="4">PRA KRL</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- componente select como listox simples -->
+                <tr>
+                    <td>Qual sua faixa etaria?</td>
+                    <td>
+                        <select name="slcFaixaEtaria" size="4">
+                            <option value="1">Menos que 18</option>
+                            <option value="2">Entre 18 e 50</option>
+                            <option value="3">Mais que 50</option>
+                            <option value="4" selected="true">Nao desejo informar minha idade</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- componente de controle select como groupbox -->
+                <tr>
+                    <td>Selecione os itens para sua lista de compras:</td>
+                    <td><select name="slcListaDeCompras[]" multiple="true" size="9">
+                            <optgroup label="Alimentos">
+                                <option value="1.1"> Biscoito</option>
+                                <option value="1.2"> Bolacha</option>
+                            </optgroup>
+                            <optgroup label="Higiene">
+                                <option value="2.1">Pasta de dente</option>
+                                <option value="2.2">Creme dental</option>
+                            </optgroup>
+                            <optgroup label="Besteiras">
+                                <option value="3.1">Chips</option>
+                                <option value="3.2">Salgadinho</option>
+                            </optgroup>
+                        </select></td>
+                </tr>
+                <!-- componente radio button com fielstet -->
+                <tr>
+                    <td>
+                        Nos dois grupos selecione a sua disciplina predileta
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Ensino medio</legend>
+                            <input type="radio" name="rdbMedio" id="rdbMatematica" value="matematica">
+                            <label for="rdbMatematica">Matematica</label>
+                            <input type="radio" name="rdbMedio" id="rdbPortugues" value="portugues">
+                            <label for="rdbMatematica">Portugues</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Ensino tecnico</legend>
+                            <input type="radio" name="rdbTecnico" id="rdbAlgoritimos" value="algoritimos">
+                            <label for="rdbMatematica">Algoritimos</label>
+                            <input type="radio" name="rdbTecnico" id="rdbWeb1" value="web 1">
+                            <label for="rdbMatematica">Web 1</label>
+                        </fieldset>
+                    </td>
+                </tr>
+
+
+
+
+                <!--componente de  botoes -->
                 <tr>
                     <td colspan="2" align="center">
                         <input type="reset" value="Limpar" id="btnLimpar" name="btnLimpar">
