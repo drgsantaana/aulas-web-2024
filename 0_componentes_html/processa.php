@@ -1,3 +1,9 @@
+<!-- ##############################
+Nome: Daniel Reis
+Curso: Engenharia de Computação - IFMG - Campus Bambui
+Descrição: Processamento dos dados dos componentes HTML
+############################## -->
+
 <?php
 
 //captura de variaveis
@@ -43,16 +49,14 @@ if (isset($_POST['chkPagode'])) {
 
 $mensagem = $_POST['txtMensagem'];
 
-$meninas = 'Pouco';
-if ($_POST['slcMeninas'] == 2) {
-	$meninas = 'Maromeno';
+$refrigerante = 'Pouco';
+if ($_POST['slcRefrigerante'] == 2) {
+	$refrigerante = 'Maromeno';
 };
-if ($_POST['slcMeninas'] == 3) {
-	$meninas = 'Muito';
+if ($_POST['slcRefrigerante'] == 3) {
+	$refrigerante = 'Muito';
 };
-if ($_POST['slcMeninas'] == 4) {
-	$meninas = 'PRA KRL';
-};
+
 
 $faixaEtaria = 'Não gostaria de informar';
 if ($_POST['slcFaixaEtaria'] == 1) {
@@ -65,32 +69,12 @@ if ($_POST['slcFaixaEtaria'] == 3) {
 	$faixaEtaria = 'Passei da data de validade';
 };
 
-$indicesListadeCompras = [];
-if (isset($_POST['slcListaDeCompras'])) {
-	$indicesListadeCompras = $_POST['slcListaDeCompras'];
-}
 
-$listaDeCompras = [];
-for ($i = 0; $i < count($indicesListadeCompras); $i++) {
-	if ($indicesListadeCompras[$i] == 1.1) {
-		array_push($listaDeCompras, 'Biscoito');
-	}
-	if ($indicesListadeCompras[$i] == 1.2) {
-		array_push($listaDeCompras, 'Bolacha');
-	}
-	if ($indicesListadeCompras[$i] == 2.1) {
-		array_push($listaDeCompras, 'Pasta de Dente');
-	}
-	if ($indicesListadeCompras[$i] == 2.2) {
-		array_push($listaDeCompras, 'Creme dental');
-	}
-	if ($indicesListadeCompras[$i] == 3.1) {
-		array_push($listaDeCompras, 'Chips');
-	}
-	if ($indicesListadeCompras[$i] == 3.2) {
-		array_push($listaDelistaDeCompras, 'Salgadinho');
-	}
-}
+
+$listaDeCompras = ["Lista vazia"];
+if (isset($_POST['slcListaDeCompras'])) {
+	$listaDeCompras = $_POST['slcListaDeCompras'];
+};
 
 $medio = 'Materia nao informada';
 if (!empty($_POST['rdbMedio'])) {  //verifica se variavel existe na url
@@ -113,11 +97,11 @@ echo 'Data de nascimento: ' . $dataNascimento . '<br>';
 echo 'Nome do arquivo: ' . $arquivo['name'] . ' - ' . ' Tamanho: ' . $arquivo['size'] . 'kb' . '<br>';
 
 if ($renda == 1) {
-	echo 'Renda: Não paga o alugel no fim do mes <br>';
+	echo 'Renda: Menos que 1 salario minimo <br>';
 } elseif ($renda == 2) {
-	echo 'Renda: Já da para pagar o alugel no fim do mes <br>';
+	echo 'Renda: 1 salario minimo <br>';
 } else {
-	echo 'Renda: Ala o cara trabalha de graça kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk <br>';
+	echo 'Renda: Mais que 1 salario minimo <br>';
 }
 
 echo 'Estilo Musical: ';
@@ -128,7 +112,7 @@ echo '<br>';
 
 echo 'A mensagem digitada foi: ' . $mensagem . '<br>';
 
-echo 'Voce gosta ' . $meninas . ' de meninas' . '<br>';
+echo 'Voce gosta ' . $refrigerante . ' de refrigerante' . '<br>';
 
 echo 'Faixa etaria: ' . $faixaEtaria . '<br>';
 

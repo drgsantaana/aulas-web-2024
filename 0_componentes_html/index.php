@@ -1,3 +1,9 @@
+<!-- ##############################
+Nome: Daniel Reis
+Curso: Engenharia de Computação - IFMG - Campus Bambui
+Descrição: 0 Componentes HTML - Introducao aos componentes HTML
+############################## -->
+
 <!DOCTYPE html>
 <html lang="ptbr">
 
@@ -92,12 +98,13 @@
                 <tr>
                     <td width="15%">Renda:</td>
                     <td>
-                        <input type="radio" name="rdbRenda" id="rdbMenosQue800" value="1" checked="POBRE">
-                        <label for="rdbMenosQue800">Menos que R$800</label>
-                        <input type="radio" name="rdbRenda" id="rdbMaisQue800" value="2">
-                        <label for="rdbMaisQue800">Mais que R$800</label>
-                        <input type="radio" name="rdbRenda" id="rdbEstagiario" value="3">
-                        <label for="rdbEstagiario">Pago pra trabalhar</label>
+                        <input type="radio" name="rdbRenda" id="rdbMenosQueUmSalario" value="1" checked="true">
+                        <label for="rdbMenosQueUmSalario">Menos que um salario minimo</label>
+                        <input type="radio" name="rdbRenda" id="rsbUmSalario" value="2">
+                        <label for="rdbUmSalario">Um salario minimo</label>
+                        <input type="radio" name="rdbRenda" id="rdbMaisQueUmSalario">
+                        <label for="rdbMaisQueUmSalario">Mais quue um salario minimo</label>
+
                     </td>
                 </tr>
                 <!-- componente de checkbox -->
@@ -123,13 +130,12 @@
                 </tr>
                 <!-- componente select como dropbox -->
                 <tr>
-                    <td>Voce gosta quando de meninas?</td>
+                    <td>Voce gosta Refrigerante?</td>
                     <td>
-                        <select name="slcMeninas" size="1">
+                        <select name="slcRefrigerante" size="1">
                             <option value="1" selected="true">Pouco</option>
                             <option value="2">Maromeno</option>
                             <option value="3">Muito</option>
-                            <option value="4">PRA KRL</option>
                         </select>
                     </td>
                 </tr>
@@ -151,16 +157,16 @@
                     <td>Selecione os itens para sua lista de compras:</td>
                     <td><select name="slcListaDeCompras[]" multiple="true" size="9">
                             <optgroup label="Alimentos">
-                                <option value="1.1"> Biscoito</option>
-                                <option value="1.2"> Bolacha</option>
+                                <option value="Biscoito"> Biscoito</option>
+                                <option value="Bolacha"> Bolacha</option>
                             </optgroup>
                             <optgroup label="Higiene">
-                                <option value="2.1">Pasta de dente</option>
-                                <option value="2.2">Creme dental</option>
+                                <option value="Pasta de dente">Pasta de dente</option>
+                                <option value="Creme Dental">Creme dental</option>
                             </optgroup>
                             <optgroup label="Besteiras">
-                                <option value="3.1">Chips</option>
-                                <option value="3.2">Salgadinho</option>
+                                <option value="Chips">Chips</option>
+                                <option value="Salgadinho">Salgadinho</option>
                             </optgroup>
                         </select></td>
                 </tr>
